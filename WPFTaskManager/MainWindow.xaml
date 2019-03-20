@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPFTaskManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTaskManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Name="st_buttons" Margin="10">
+            <Button Name="btn_Start">Start</Button>
+            <Button Name="btn_Stop">Stop</Button>
+            
+        </StackPanel>
+        <ListBox Grid.Row="1" Name="lb_processes">
+
+        </ListBox>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label>Kill by Name</Label>
+            <TextBox  Name="tb_killname" ></TextBox>
+        <Button Name="btn_killbyname"  >Kill</Button>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <Label>Kill by Id</Label>
+            <TextBox  Name="tb_killid"></TextBox>
+            <Button Name="btn_killbyid"  Grid.Row="0" Grid.Column="2" >Kill</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+        <Label >Name:</Label>
+        <TextBox Name="tb_startname"  ></TextBox>
+        <Button                       >Start new Process</Button>
+        </StackPanel >
+        <StackPanel VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <TextBox Name="tb_openFile"></TextBox>
+            <Button Name="btn_Open" Click="Btn_Open_Click">Open</Button>
+        </StackPanel>
+    </Grid>
+</Window>
