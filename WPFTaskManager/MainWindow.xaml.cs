@@ -54,6 +54,7 @@ namespace WPFTaskManager
 
         private void Btn_Open_Click(object sender, RoutedEventArgs e)
         {
+            
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.ShowDialog();
             tb_openFile.Text = openFile.FileName;
